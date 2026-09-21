@@ -78,6 +78,23 @@
       notes: 'Business improvement area. Same plugin pattern as above.'
     },
 
+    {
+      id: 'visit-oakville', name: 'Visit Oakville (tourism events calendar)', city: 'Oakville', region: 'Halton',
+      kind: 'tourism', official: true, priority: 1, enabled: true,
+      type: 'tribe', url: tecRest('https://visitoakville.com'), urlStatus: 'standard-pattern',
+      fallback: { type: 'ics', url: tecIcs('https://visitoakville.com'), urlStatus: 'standard-pattern' },
+      homepage: 'https://visitoakville.com/events/',
+      notes: 'Tourism calendar with submission guidelines (curated, public events only). Its event list has the layout of The Events Calendar plugin; feed URLs follow the plugin\'s standard pattern (unconfirmed).'
+    },
+    {
+      id: 'markham-review', name: 'Markham Review (community calendar, not official)', city: 'Markham', region: 'York',
+      kind: 'community', official: false, priority: 3, enabled: true,
+      type: 'tribe', url: tecRest('https://markhamreview.com'), urlStatus: 'standard-pattern',
+      fallback: { type: 'ics', url: tecIcs('https://markhamreview.com'), urlStatus: 'standard-pattern' },
+      homepage: 'https://markhamreview.com/events/',
+      notes: 'Independent community publication, NOT the City of Markham. It publishes .ics exports of its calendar (an export URL was seen in search results). Listings are shown with a "Community listing" label — confirm details on the linked page.'
+    },
+
     /* ----------------- NEEDS A FEED (listed so nothing is forgotten) -----------------
        These are real organisations' websites. No public API/RSS/ICS URL has been confirmed for them, so
        they are NOT fetched. To activate one: find its official feed (look for "Subscribe", "iCal",
