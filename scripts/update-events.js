@@ -1,0 +1,105 @@
+#!/usr/bin/env node
+/*
+ * GTA Events Hub — weekly updater (plain Node.js, no dependencies, NO AI).
+ * Run by GitHub Actions (.github/workflows/update-events.yml) or by hand:  node scripts/update-events.js
+ *
+ * For each enabled source in sources.js it:
+ *   1. checks robots.txt and skips anything the site disallows,
+ *   2. fetches the site's own published feed (Tribe REST / ICS / RSS / JSON-LD / JSON) politely (throttled, identified),
+ *   3. normalises, categorises and de-duplicates with core.js,
+ *   4. keeps the last good data for a source if it fails this week,
+ *   5. writes events.json (+ events-data.js and data/source-cache.json).
+ */
+'use strict';
+const fs = require('fs');
+const path = require('path');
+const Core = require('../core.js');
+const Collector = require('../collector.js');
+const { CONFIG, EVENT_SOURCES } = require('../sources.js');
+
+const ROOT = path.join(__dirname, '..');
+const OUT = path.join(ROOT, 'events.json');
+const CACHE = path.join(ROOT, 'data', 'source-cache.json');
+const MANUAL = path.join(ROOT, 'manual-events.json');
+const DELAY_MS = +process.env.REQUEST_DELAY_MS || 1200;
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const readJson = (f, dflt) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (_) { return dflt; } };
+
+const robotsCache = new Map();
+let lastRequestAt = 0;
+
+async function politeFetch(url, opts) {
+  const u = new URL(url);
+  // robots.txt (fetched once per origin)
+  if (!robotsCache.has(u.origin)) {
+    let txt = '';
+    try {
+      const r = await fetch(u.origin + '/robots.txt', { headers: { 'User-Agent': CONFIG.USER_AGENT }, signal: AbortSignal.timeout(10000) });
+      if (r.ok) txt = await r.text();
+    } catch (_) { /* no robots.txt reachable: treat as no restrictions */ }
+    robotsCache.set(u.origin, txt);
+  }
+  if (!Core.robotsAllows(robotsCache.get(u.origin), u.pathname + u.search, CONFIG.USER_AGENT)) {
+    const e = new Error('robots.txt disallows automated access to ' + u.pathname); e.name = 'RobotsError'; throw e;
+  }
+  const wait = lastRequestAt + DELAY_MS - Date.now();
+  if (wait > 0) await sleep(wait);
+  lastRequestAt = Date.now();
+  return fetch(url, Object.assign({}, opts, { headers: Object.assign({ 'User-Agent': CONFIG.USER_AGENT }, opts && opts.headers) }));
+}
+
+async function main() {
+  const now = new Date();
+  const ctx = Collector.makeContext({ now, horizonDays: CONFIG.HORIZON_DAYS, fetch: politeFetch, timeoutMs: CONFIG.FETCH_TIMEOUT_MS, isBrowser: false });
+  const cache = readJson(CACHE, { sources: {} });
+  cache.sources = cache.sources || {};
+  const status = {};
+  let ok = 0, failed = 0;
+
+  for (const src of EVENT_SOURCES) {
+    if (!src.enabled || src.type === 'manual') continue;
+    const prev = cache.sources[src.id];
+    process.stdout.write('• ' + src.name + ' … ');
+    try {
+      const res = await Collector.collectSource(src, ctx);
+      cache.sources[src.id] = { lastOk: ctx.nowIso, events: res.events };
+      status[src.id] = { name: src.name, status: 'ok', lastOk: ctx.nowIso, lastAttempt: ctx.nowIso, count: res.events.length, via: res.via, note: res.note || undefined };
+      ok++;
+      console.log('ok (' + res.events.length + ' events via ' + res.via + ')');
+    } catch (e) {
+      failed++;
+      const kept = prev && Array.isArray(prev.events) ? prev.events : [];
+      status[src.id] = { name: src.name, status: 'failed', lastOk: prev && prev.lastOk || null, lastAttempt: ctx.nowIso, count: kept.length, error: e.message, keptPreviousData: kept.length > 0 || undefined };
+      console.log('FAILED — ' + e.message + (kept.length ? ' (keeping ' + kept.length + ' events from last good run)' : ''));
+      if (process.env.GITHUB_ACTIONS) console.log('::warning title=' + src.name + '::' + e.message);
+    }
+  }
+
+  // assemble: cached events of every enabled source (fresh or kept) + manual events
+  let all = [];
+  Object.keys(cache.sources).forEach(id => {
+    const s = EVENT_SOURCES.find(x => x.id === id);
+    if (!s || !s.enabled) return;
+    (cache.sources[id].events || []).forEach(ev => { if ((ev.endDate || ev.startDate) >= ctx.today && ev.startDate <= ctx.horizonEnd) all.push(ev); });
+  });
+  const manual = Collector.collectManual(readJson(MANUAL, []), ctx);
+  all = all.concat(manual);
+  const events = Core.sortEvents(Core.dedupe(all));
+  const merged = events.length !== undefined ? all.length - events.length : 0;
+
+  const meta = {
+    version: 1, generatedAt: ctx.nowIso, generatedBy: 'scripts/update-events.js', demo: false,
+    refreshEveryDays: CONFIG.REFRESH_EVERY_DAYS, eventCount: events.length, duplicatesMerged: merged,
+    manualEvents: manual.length, sourcesOk: ok, sourcesFailed: failed, sources: status
+  };
+  fs.mkdirSync(path.dirname(CACHE), { recursive: true });
+  fs.writeFileSync(CACHE, JSON.stringify(cache));
+  const payload = JSON.stringify({ meta, events }, null, 0);
+  fs.writeFileSync(OUT, payload);
+  fs.writeFileSync(path.join(ROOT, 'events-data.js'), '/* generated by scripts/update-events.js — lets index.html work when opened straight from disk */\nwindow.GTA_EVENTS_DATA = ' + payload + ';\n');
+  console.log('\nWrote events.json: ' + events.length + ' events · ' + ok + ' sources ok · ' + failed + ' failed · ' + merged + ' duplicates merged · ' + manual.length + ' manual');
+  if (ok === 0 && manual.length === 0 && events.length === 0) console.log('::warning::No live events were collected this run. The site will keep showing its last data (or demo data).');
+}
+
+main().catch(e => { console.error(e); process.exit(1); });

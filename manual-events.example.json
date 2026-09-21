@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Neighbourhood BBQ (example — delete or replace)",
+    "startDate": "2026-10-03",
+    "startTime": "12:00",
+    "endDate": "2026-10-03",
+    "endTime": "15:00",
+    "venue": "Example Park",
+    "address": "123 Example St",
+    "city": "Milton",
+    "url": "https://example.org/official-event-page",
+    "registrationUrl": "",
+    "priceText": "Free",
+    "organizer": "Example Residents Association",
+    "categories": ["Community", "Food & Drink"],
+    "description": "Short description copied from the official page.",
+    "sourceName": "Example Residents Association (added manually)"
+  }
+]

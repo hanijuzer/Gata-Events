@@ -1,0 +1,14 @@
+{
+  "name": "gta-events-hub",
+  "version": "1.0.0",
+  "description": "Free, AI-free event discovery site for Mississauga and the GTA. Plain HTML/CSS/JS + a weekly Node script.",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test tests/core.test.js",
+    "update": "node scripts/update-events.js",
+    "demo": "node scripts/make-demo-events.js",
+    "serve": "python3 -m http.server 8080"
+  }
+}

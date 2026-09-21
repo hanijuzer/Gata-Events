@@ -1,0 +1,1314 @@
+{
+ "meta": {
+  "version": 1,
+  "generatedAt": "2026-09-21T11:52:46.925Z",
+  "generatedBy": "scripts/make-demo-events.js",
+  "demo": true,
+  "note": "DEMO DATA — fictional sample events. Replaced by real data after the first run of scripts/update-events.js.",
+  "refreshEveryDays": 7,
+  "eventCount": 39,
+  "sourcesOk": 0,
+  "sourcesFailed": 0,
+  "sources": {}
+ },
+ "events": [
+  {
+   "id": "6c2a2185",
+   "title": "Sample Community Cleanup Night",
+   "startDate": "2026-09-21",
+   "startTime": "18:30",
+   "endDate": "2026-09-21",
+   "endTime": "20:00",
+   "venue": "Demo Park Pavilion",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Community",
+    "Nature & Outdoors",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Community",
+    "Nature & Outdoors"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "0edea1be",
+   "title": "Sample Live Music Night",
+   "startDate": "2026-09-21",
+   "startTime": "19:00",
+   "endDate": "2026-09-21",
+   "endTime": "22:00",
+   "venue": "Demo Arts Centre",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Music",
+    "Concerts",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Music",
+    "Concerts"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    },
+    {
+     "name": "Demo data (second listing)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "fd5b3654",
+   "title": "Sample Toddler Storytime",
+   "startDate": "2026-09-22",
+   "startTime": "10:00",
+   "endDate": "2026-09-22",
+   "endTime": "11:00",
+   "venue": "Demo Library Branch",
+   "city": "Brampton",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Library",
+    "Family & Kids",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Library",
+    "Family & Kids"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "f40862d9",
+   "title": "Sample Startup Networking Mixer",
+   "startDate": "2026-09-22",
+   "startTime": "18:00",
+   "endDate": "2026-09-22",
+   "endTime": "21:00",
+   "venue": "Demo Innovation Hub",
+   "city": "Markham",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$15",
+   "priceMin": 15,
+   "priceMax": 15,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Networking",
+    "Business"
+   ],
+   "sourceCategories": [
+    "Networking",
+    "Business"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "9109d073",
+   "title": "Sample Photography Exhibition",
+   "startDate": "2026-09-23",
+   "startTime": "10:00",
+   "endDate": "2026-11-18",
+   "endTime": "17:00",
+   "venue": "Demo Gallery",
+   "city": "Oakville",
+   "description": "DEMO DATA — fictional sample event.",
+   "priceText": "$10",
+   "priceMin": 10,
+   "priceMax": 10,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Exhibitions",
+    "Arts"
+   ],
+   "sourceCategories": [
+    "Exhibitions",
+    "Arts"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "68486005",
+   "title": "Sample Family Craft Afternoon",
+   "startDate": "2026-09-23",
+   "startTime": "12:00",
+   "endDate": "2026-09-23",
+   "endTime": "15:00",
+   "venue": "Demo Community Centre",
+   "city": "Oakville",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$8",
+   "priceMin": 8,
+   "priceMax": 8,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Family & Kids",
+    "Workshops"
+   ],
+   "sourceCategories": [
+    "Family & Kids",
+    "Workshops"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "87b3f854",
+   "title": "Sample Comedy Showcase",
+   "startDate": "2026-09-23",
+   "startTime": "19:30",
+   "endDate": "2026-09-23",
+   "endTime": "21:30",
+   "venue": "Demo Theatre",
+   "city": "Toronto",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$25",
+   "priceMin": 25,
+   "priceMax": 25,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Comedy"
+   ],
+   "sourceCategories": [
+    "Comedy"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "bc58ce16",
+   "title": "Sample Beginner Yoga in the Park",
+   "startDate": "2026-09-24",
+   "startTime": "09:00",
+   "endDate": "2026-09-24",
+   "endTime": "12:00",
+   "venue": "Demo Lakeside Park",
+   "city": "Burlington",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Health & Fitness",
+    "Parks",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Health & Fitness",
+    "Parks"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "208d06df",
+   "title": "Sample Intro to Coding Workshop",
+   "startDate": "2026-09-24",
+   "startTime": "18:00",
+   "endDate": "2026-09-24",
+   "endTime": "20:00",
+   "venue": "Demo Public Library",
+   "city": "Vaughan",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Technology",
+    "Workshops",
+    "Education",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Technology",
+    "Workshops",
+    "Education"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "6df4b592",
+   "title": "Sample Night Market",
+   "startDate": "2026-09-25",
+   "startTime": "17:00",
+   "endDate": "2026-09-25",
+   "endTime": "21:00",
+   "venue": "Demo Town Square",
+   "city": "Milton",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Food & Drink",
+    "Shopping",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Food & Drink",
+    "Shopping"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "d3798748",
+   "title": "Sample Jazz Evening",
+   "startDate": "2026-09-25",
+   "startTime": "20:00",
+   "endDate": "2026-09-25",
+   "endTime": "23:00",
+   "venue": "Demo Jazz Room",
+   "city": "Toronto",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$30",
+   "priceMin": 30,
+   "priceMax": 30,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Music"
+   ],
+   "sourceCategories": [
+    "Music"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "46fcacbd",
+   "title": "Sample Farmers Market",
+   "startDate": "2026-09-26",
+   "startTime": "10:00",
+   "endDate": "2026-09-26",
+   "endTime": "16:00",
+   "venue": "Demo Market Grounds",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Farmers Markets",
+    "Food & Drink",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Farmers Markets",
+    "Food & Drink"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "e92ffc73",
+   "title": "Sample Diwali Cultural Celebration",
+   "startDate": "2026-09-26",
+   "startTime": "11:00",
+   "endDate": "2026-09-26",
+   "endTime": "14:00",
+   "venue": "Demo Celebration Square",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Religious/Cultural celebrations",
+    "Festivals",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Religious/Cultural celebrations",
+    "Festivals"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "90e02401",
+   "title": "Sample Diwali Community Fair",
+   "startDate": "2026-09-26",
+   "startTime": "13:00",
+   "endDate": "2026-09-26",
+   "endTime": "17:00",
+   "venue": "Demo Convention Hall",
+   "city": "Brampton",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$5",
+   "priceMin": 5,
+   "priceMax": 5,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Religious/Cultural celebrations",
+    "Community"
+   ],
+   "sourceCategories": [
+    "Religious/Cultural celebrations",
+    "Community"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "afd0e110",
+   "title": "Sample Youth Soccer Tournament",
+   "startDate": "2026-09-26",
+   "startTime": "18:00",
+   "endDate": "2026-09-26",
+   "endTime": "20:00",
+   "venue": "Demo Sports Complex",
+   "city": "Ajax",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Sports",
+    "Family & Kids",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Sports",
+    "Family & Kids"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "a165dab7",
+   "title": "Sample Diwali Cultural Night",
+   "startDate": "2026-09-26",
+   "startTime": "19:00",
+   "endDate": "2026-09-26",
+   "endTime": "22:00",
+   "venue": "Demo Cultural Centre",
+   "city": "Toronto",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$20",
+   "priceMin": 20,
+   "priceMax": 20,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Cultural",
+    "Religious/Cultural celebrations"
+   ],
+   "sourceCategories": [
+    "Cultural",
+    "Religious/Cultural celebrations"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "e6f35081",
+   "title": "Sample Trail Hike and Nature Walk",
+   "startDate": "2026-09-27",
+   "startTime": "10:00",
+   "endDate": "2026-09-27",
+   "endTime": "14:00",
+   "venue": "Demo Conservation Area",
+   "city": "Halton Hills",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Nature & Outdoors",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Nature & Outdoors"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "be46e4bf",
+   "title": "Sample Craft Beer Weekend",
+   "startDate": "2026-09-27",
+   "startTime": "11:00",
+   "endDate": "2026-09-27",
+   "endTime": "17:00",
+   "venue": "Demo Brewery Grounds",
+   "city": "Oshawa",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$12",
+   "priceMin": 12,
+   "priceMax": 12,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Food & Drink"
+   ],
+   "sourceCategories": [
+    "Food & Drink"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "80dc037b",
+   "title": "Sample Classical Afternoon Concert",
+   "startDate": "2026-09-27",
+   "startTime": "14:00",
+   "endDate": "2026-09-27",
+   "endTime": "16:00",
+   "venue": "Demo Concert Hall",
+   "city": "Richmond Hill",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$35",
+   "priceMin": 35,
+   "priceMax": 35,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Concerts",
+    "Music"
+   ],
+   "sourceCategories": [
+    "Concerts",
+    "Music"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "dbc87d68",
+   "title": "Sample Career Fair Info Session",
+   "startDate": "2026-09-28",
+   "startTime": "18:30",
+   "endDate": "2026-09-28",
+   "endTime": "20:30",
+   "venue": "Demo College Atrium",
+   "city": "Oakville",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Career",
+    "Education",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Career",
+    "Education"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "1305ad01",
+   "title": "Sample Local Film Screening",
+   "startDate": "2026-09-29",
+   "startTime": "19:00",
+   "endDate": "2026-09-29",
+   "endTime": "21:00",
+   "venue": "Demo Cinema House",
+   "city": "Pickering",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$12",
+   "priceMin": 12,
+   "priceMax": 12,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Movies"
+   ],
+   "sourceCategories": [
+    "Movies"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "8a8ba2e5",
+   "title": "Sample Seniors Wellness Talk",
+   "startDate": "2026-09-30",
+   "startTime": "17:30",
+   "endDate": "2026-09-30",
+   "endTime": "19:00",
+   "venue": "Demo Seniors Centre",
+   "city": "Whitby",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Health & Fitness",
+    "Community",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Health & Fitness",
+    "Community"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "6d73881c",
+   "title": "Sample Kids Science Saturday",
+   "startDate": "2026-10-01",
+   "startTime": "10:00",
+   "endDate": "2026-10-01",
+   "endTime": "12:00",
+   "venue": "Demo Science Room",
+   "city": "Burlington",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$10",
+   "priceMin": 10,
+   "priceMax": 10,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Family & Kids",
+    "Education"
+   ],
+   "sourceCategories": [
+    "Family & Kids",
+    "Education"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "1da79030",
+   "title": "Sample Harvest Food Festival",
+   "startDate": "2026-10-01",
+   "startTime": "18:00",
+   "endDate": "2026-10-01",
+   "endTime": "22:00",
+   "venue": "Demo Festival Grounds",
+   "city": "Vaughan",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Festivals",
+    "Food & Drink",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Festivals",
+    "Food & Drink"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "67ac15df",
+   "title": "Sample Art Studio Open House",
+   "startDate": "2026-10-02",
+   "startTime": "13:00",
+   "endDate": "2026-10-02",
+   "endTime": "16:00",
+   "venue": "Demo Art Studio",
+   "city": "Milton",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Arts",
+    "Exhibitions",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Arts",
+    "Exhibitions"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "0df92234",
+   "title": "Sample Weekend Arts Festival",
+   "startDate": "2026-10-03",
+   "startTime": "11:00",
+   "endDate": "2026-10-05",
+   "endTime": "20:00",
+   "venue": "Demo Festival Grounds",
+   "city": "Mississauga",
+   "description": "DEMO DATA — fictional sample event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Festivals",
+    "Arts",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Festivals",
+    "Arts"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "d95946c7",
+   "title": "Sample Business Breakfast Talk",
+   "startDate": "2026-10-03",
+   "startTime": "19:00",
+   "endDate": "2026-10-03",
+   "endTime": "21:00",
+   "venue": "Demo Chamber Hall",
+   "city": "Markham",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$45",
+   "priceMin": 45,
+   "priceMax": 45,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Business",
+    "Networking"
+   ],
+   "sourceCategories": [
+    "Business",
+    "Networking"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "eec44b22",
+   "title": "Sample Halloween Family Bash",
+   "startDate": "2026-10-04",
+   "startTime": "18:00",
+   "endDate": "2026-10-04",
+   "endTime": "21:00",
+   "venue": "Demo Community Park",
+   "city": "Brampton",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Holiday Events",
+    "Family & Kids",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Holiday Events",
+    "Family & Kids"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "9572f4f2",
+   "title": "Sample Theatre Opening Night",
+   "startDate": "2026-10-05",
+   "startTime": "19:30",
+   "endDate": "2026-10-05",
+   "endTime": "22:00",
+   "venue": "Demo Playhouse",
+   "city": "Toronto",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$65",
+   "priceMin": 65,
+   "priceMax": 65,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Theatre",
+    "Arts"
+   ],
+   "sourceCategories": [
+    "Theatre",
+    "Arts"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "65603a7d",
+   "title": "Sample 5K Fun Run",
+   "startDate": "2026-10-06",
+   "startTime": "09:00",
+   "endDate": "2026-10-06",
+   "endTime": "13:00",
+   "venue": "Demo Waterfront Trail",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$30",
+   "priceMin": 30,
+   "priceMax": 30,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Sports",
+    "Health & Fitness"
+   ],
+   "sourceCategories": [
+    "Sports",
+    "Health & Fitness"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "96752224",
+   "title": "Sample Town Hall Public Meeting",
+   "startDate": "2026-10-07",
+   "startTime": "18:00",
+   "endDate": "2026-10-07",
+   "endTime": "20:00",
+   "venue": "Demo Civic Centre",
+   "city": "Newmarket",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Government/Community",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Government/Community"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "1ced1d5b",
+   "title": "Sample Holiday Craft Market",
+   "startDate": "2026-10-08",
+   "startTime": "12:00",
+   "endDate": "2026-10-08",
+   "endTime": "18:00",
+   "venue": "Demo Arena",
+   "city": "Oakville",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$3",
+   "priceMin": 3,
+   "priceMax": 3,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Holiday Events",
+    "Shopping"
+   ],
+   "sourceCategories": [
+    "Holiday Events",
+    "Shopping"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "6739ecce",
+   "title": "Sample Choir Concert",
+   "startDate": "2026-10-09",
+   "startTime": "19:00",
+   "endDate": "2026-10-09",
+   "endTime": "21:30",
+   "venue": "Demo Community Church Hall",
+   "city": "Georgetown",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$20",
+   "priceMin": 20,
+   "priceMax": 20,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Concerts",
+    "Music"
+   ],
+   "sourceCategories": [
+    "Concerts",
+    "Music"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "16a4ab94",
+   "title": "Sample Indigenous Cultural Gathering",
+   "startDate": "2026-10-11",
+   "startTime": "10:00",
+   "endDate": "2026-10-11",
+   "endTime": "15:00",
+   "venue": "Demo University Grounds",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Cultural",
+    "Community",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Cultural",
+    "Community"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "787b38c2",
+   "title": "Sample Coding for Kids Workshop",
+   "startDate": "2026-10-13",
+   "startTime": "18:00",
+   "endDate": "2026-10-13",
+   "endTime": "20:00",
+   "venue": "Demo Tech Lab",
+   "city": "Richmond Hill",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$55",
+   "priceMin": 55,
+   "priceMax": 55,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Technology",
+    "Family & Kids",
+    "Workshops"
+   ],
+   "sourceCategories": [
+    "Technology",
+    "Family & Kids",
+    "Workshops"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "905092a2",
+   "title": "Sample Open Mic Night",
+   "startDate": "2026-10-15",
+   "startTime": "20:00",
+   "endDate": "2026-10-15",
+   "endTime": "23:00",
+   "venue": "Demo Cafe Stage",
+   "city": "Pickering",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Music",
+    "Community",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Music",
+    "Community"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "0bc31e40",
+   "title": "Sample Museum Family Day",
+   "startDate": "2026-10-17",
+   "startTime": "11:00",
+   "endDate": "2026-10-17",
+   "endTime": "16:00",
+   "venue": "Demo Local Museum",
+   "city": "Burlington",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "Free",
+   "isFree": true,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Museum",
+    "Family & Kids",
+    "Free Events"
+   ],
+   "sourceCategories": [
+    "Museum",
+    "Family & Kids"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "e56f6283",
+   "title": "Sample Wine Tasting Night",
+   "startDate": "2026-10-19",
+   "startTime": "18:00",
+   "endDate": "2026-10-19",
+   "endTime": "21:00",
+   "venue": "Demo Wine Bar",
+   "city": "Whitby",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$40",
+   "priceMin": 40,
+   "priceMax": 40,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Food & Drink"
+   ],
+   "sourceCategories": [
+    "Food & Drink"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  },
+  {
+   "id": "aa8b40cf",
+   "title": "Sample Regional Trade Expo",
+   "startDate": "2026-10-21",
+   "startTime": "10:00",
+   "endDate": "2026-10-21",
+   "endTime": "17:00",
+   "venue": "Demo Expo Centre",
+   "city": "Mississauga",
+   "description": "DEMO DATA — this is a fictional sample event used to show how the interface looks. It is not a real event.",
+   "priceText": "$20",
+   "priceMin": 20,
+   "priceMax": 20,
+   "isFree": false,
+   "source": "Demo data (fictional)",
+   "sourceId": "demo",
+   "sourceKind": "demo",
+   "updated": "2026-09-21T11:52:46.920Z",
+   "categories": [
+    "Business"
+   ],
+   "sourceCategories": [
+    "Business"
+   ],
+   "demo": true,
+   "sources": [
+    {
+     "name": "Demo data (fictional)",
+     "kind": "demo"
+    }
+   ]
+  }
+ ]
+}

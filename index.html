@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GTA Events Hub — events in Mississauga and the Greater Toronto Area</title>
+  <meta name="description" content="Free event discovery for Mississauga and the GTA. Search, filter, save and add events to your calendar. No account. No AI.">
+  <meta name="theme-color" content="#12263a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+      <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
+      <symbol id="i-filter" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+      <symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#results">Skip to events</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-row">
+      <div class="brand">
+        <img src="icons/icon.svg" alt="" width="44" height="44">
+        <div>
+          <h1>GTA Events Hub</h1>
+          <p class="tagline">Mississauga • GTA • Weekly Events</p>
+        </div>
+      </div>
+      <div class="masthead-tools">
+        <button id="btn-theme" class="icon-btn on-dark" type="button" aria-label="Switch to dark mode" title="Switch colour theme">
+          <svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button id="btn-refresh" class="btn btn-amber" type="button">
+          <svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg><span>Refresh Events</span>
+        </button>
+      </div>
+    </div>
+    <div class="wrap">
+      <nav class="tabs" aria-label="Sections">
+        <button type="button" data-view="discover" aria-current="page">Discover</button>
+        <button type="button" data-view="mine">My Events <span id="mine-count" class="pill" hidden></span></button>
+        <button type="button" data-view="sources">Sources &amp; status</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="status-strip" class="status-strip" role="status" aria-live="polite"></div>
+  <div id="demo-banner" class="demo-banner" role="note" hidden>
+    <strong>DEMO DATA</strong> — these are fictional sample events that show how the site works. Real events appear once the weekly update has run
+    (<button type="button" class="linklike" data-view-link="sources">see Sources &amp; status</button>).
+  </div>
+
+  <main id="main" class="wrap">
+    <!-- ============================ DISCOVER ============================ -->
+    <section id="view-discover" class="view" aria-label="Discover events">
+      <div class="controls" id="controls">
+        <div class="controls-row">
+          <form class="searchbar" role="search" action="#" onsubmit="return false">
+            <label class="sr-only" for="q">Search events by title, venue, city, category, organizer or description</label>
+            <input id="q" type="search" placeholder="Search events…  try “Diwali”" autocomplete="off" enterkeyhint="search" spellcheck="false">
+          </form>
+          <button id="btn-filters" class="btn btn-outline" type="button" aria-expanded="false" aria-controls="filters">
+            <svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg><span>Filters</span><span id="filter-count" class="pill" hidden></span>
+          </button>
+        </div>
+        <div class="quick" role="group" aria-label="Quick date filters">
+          <button type="button" class="chip" data-date="today" aria-pressed="false">Today</button>
+          <button type="button" class="chip" data-date="week" aria-pressed="false">This Week</button>
+          <button type="button" class="chip" data-date="weekend" aria-pressed="false">Weekend</button>
+          <button type="button" class="chip" data-date="nextweek" aria-pressed="false">Next Week</button>
+          <button type="button" class="chip" data-date="month" aria-pressed="false">This Month</button>
+        </div>
+      </div>
+
+      <div id="filters" class="filters" hidden>
+        <div class="filter-grid">
+          <div class="field">
+            <label for="f-region">Location</label>
+            <select id="f-region"></select>
+          </div>
+          <div class="field">
+            <label for="f-date">Date</label>
+            <select id="f-date">
+              <option value="any">Any date</option>
+              <option value="today">Today</option>
+              <option value="tomorrow">Tomorrow</option>
+              <option value="weekend">This Weekend</option>
+              <option value="week">Rest of this week</option>
+              <option value="next7">Next 7 Days</option>
+              <option value="next14">Next 14 Days</option>
+              <option value="nextweek">Next Week</option>
+              <option value="month">This Month</option>
+              <option value="custom">Custom Date…</option>
+            </select>
+          </div>
+          <div class="field" id="custom-dates" hidden>
+            <label for="f-from">From</label><input id="f-from" type="date">
+            <label for="f-to">To</label><input id="f-to" type="date">
+          </div>
+          <div class="field">
+            <label for="f-price">Price</label>
+            <select id="f-price">
+              <option value="all">All prices</option>
+              <option value="free">Free</option>
+              <option value="u10">Under $10</option>
+              <option value="10-25">$10–$25</option>
+              <option value="25-50">$25–$50</option>
+              <option value="50+">$50+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-km">Distance</label>
+            <div class="split">
+              <select id="f-km" aria-label="Distance">
+                <option value="0">Anywhere</option>
+                <option value="5">Within 5 km</option>
+                <option value="10">Within 10 km</option>
+                <option value="25">Within 25 km</option>
+                <option value="50">Within 50 km</option>
+              </select>
+              <select id="f-center" aria-label="Measure distance from"></select>
+            </div>
+            <p class="hint">Uses the event’s coordinates when the source gives them, otherwise the city centre. Your location is only used if you pick “My location”.</p>
+          </div>
+        </div>
+        <fieldset class="cat-field">
+          <legend>Categories <span class="hint">(pick any number)</span></legend>
+          <div id="f-cats" class="cat-chips"></div>
+        </fieldset>
+        <div class="filter-foot">
+          <label class="check"><input type="checkbox" id="f-long"> Include long-running exhibits and series (over 14 days)</label>
+          <button id="btn-clear" class="btn btn-ghost" type="button">Clear all filters</button>
+        </div>
+      </div>
+
+      <div class="rail-wrap">
+        <h2 class="rail-title" id="rail-title">Next three weeks</h2>
+        <div id="dayrail" class="dayrail" role="group" aria-labelledby="rail-title"></div>
+      </div>
+
+      <div id="active-chips" class="active-chips" aria-label="Active filters"></div>
+      <p id="result-summary" class="result-summary" aria-live="polite"></p>
+
+      <div id="highlights" class="highlights"></div>
+
+      <h2 id="all-heading" class="section-title" hidden>All upcoming events</h2>
+      <div id="results" class="results" tabindex="-1"></div>
+      <div class="more-wrap"><button id="btn-more" class="btn btn-outline" type="button" hidden>Show more events</button></div>
+    </section>
+
+    <!-- ============================ MY EVENTS ============================ -->
+    <section id="view-mine" class="view" aria-label="My events" hidden>
+      <div class="view-head">
+        <div>
+          <h2 class="section-title">My Events</h2>
+          <p class="muted">Saved on this device only — no account. Clearing your browser data removes them.</p>
+        </div>
+        <button id="btn-ics-all" class="btn btn-outline" type="button"><svg class="ico" aria-hidden="true"><use href="#i-dl"/></svg><span>Add all upcoming to calendar (.ics)</span></button>
+      </div>
+      <div id="mine-body"></div>
+    </section>
+
+    <!-- ============================ SOURCES ============================ -->
+    <section id="view-sources" class="view" aria-label="Sources and data status" hidden>
+      <h2 class="section-title">Sources &amp; data status</h2>
+      <div id="sources-body"></div>
+    </section>
+  </main>
+
+  <footer class="site-foot wrap">
+    <p><strong>No AI.</strong> Events are collected from public feeds with ordinary code; categories come from the source or from fixed keyword rules; duplicates are matched by title, date and venue.</p>
+    <p>Details come from each listed source and can change or be cancelled — always confirm on the official page before you go. Free/paid labels are shown only when the source says so.</p>
+    <p class="muted">Maps © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>.</p>
+  </footer>
+
+  <dialog id="event-dialog" aria-labelledby="dlg-title">
+    <div id="dlg-body"></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="events-data.js"></script>
+  <script src="core.js"></script>
+  <script src="sources.js"></script>
+  <script src="collector.js"></script>
+  <script src="demo-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
