@@ -1,0 +1,62 @@
+# Weekly, AI-free data collection + free hosting on GitHub Pages.
+# One-time setup:  Settings → Pages → Build and deployment → Source: "GitHub Actions".
+name: Update events and deploy
+
+on:
+  schedule:
+    - cron: '17 9 * * 1'      # every Monday 09:17 UTC (about 5 a.m. Toronto time)
+  workflow_dispatch:           # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]           # redeploy when you edit the site (does not re-collect events)
+    paths-ignore: ['events.json', 'events-data.js', 'data/**', 'README.md']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Self-test the parsing/dedupe/category logic
+        run: node --test tests/core.test.js
+
+      - name: Collect events from the configured public feeds
+        if: github.event_name != 'push'
+        run: node scripts/update-events.js
+
+      - name: Save updated data to the repository
+        if: github.event_name != 'push'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add events.json events-data.js data/source-cache.json
+          git diff --cached --quiet || git commit -m "Update events $(date -u +%F)"
+          git push
+
+      - name: Assemble the website
+        run: |
+          mkdir _site
+          cp index.html styles.css app.js core.js collector.js sources.js demo-data.js events.json events-data.js manual-events.json manifest.json service-worker.js _site/
+          cp -r icons fonts _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
